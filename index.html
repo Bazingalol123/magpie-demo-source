@@ -12,10 +12,13 @@
   main { max-width: 760px; margin: 0 auto; padding: 28px 20px 60px; }
   .breadcrumb { color: #777; font-size: 12px; margin-bottom: 14px; }
   .listing { background: #fff; border: 1px solid #e2e2e2; border-radius: 10px; padding: 28px; display: grid; grid-template-columns: 220px 1fr; gap: 26px; }
-  .photo { width: 220px; height: 220px; border-radius: 8px; background: linear-gradient(135deg, #2b2f38, #464b57); display: grid; place-items: center; color: #cfd3da; font-size: 13px; }
+  .photo { width: 220px; height: 220px; border-radius: 8px; background: linear-gradient(135deg, #232733, #3d4353); display: grid; place-items: center; }
+  .photo svg { width: 66%; height: 66%; }
   h1 { margin: 0 0 6px; font-size: 24px; letter-spacing: -0.02em; }
   .badge { display: inline-block; padding: 3px 9px; border-radius: 999px; background: #e6f4ea; color: #1e7e34; font-size: 11px; font-weight: 600; margin-bottom: 10px; }
-  .price { font-size: 32px; font-weight: 800; color: #14213d; margin: 6px 0 14px; }
+  .price-row { display: flex; align-items: baseline; gap: 9px; margin: 6px 0 14px; }
+  .price-label { font-size: 13px; font-weight: 600; color: #777; text-transform: uppercase; letter-spacing: 0.04em; }
+  .price { font-size: 32px; font-weight: 800; color: #14213d; }
   .specs { list-style: none; margin: 0 0 16px; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; font-size: 14px; }
   .specs li b { color: #555; font-weight: 600; margin-right: 6px; }
   .desc { font-size: 14px; line-height: 1.6; color: #333; border-top: 1px solid #eee; padding-top: 14px; }
@@ -27,12 +30,28 @@
   <main>
     <div class="breadcrumb">Electronics &rsaquo; Cameras &rsaquo; Mirrorless</div>
     <div class="listing">
-      <div class="photo">camera photo</div>
+      <div class="photo">
+        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Sony A7 IV camera illustration">
+          <rect x="14" y="42" width="92" height="54" rx="10" fill="#e7e9ee" />
+          <rect x="34" y="26" width="34" height="20" rx="6" fill="#e7e9ee" />
+          <circle cx="60" cy="69" r="27" fill="#9aa1b0" />
+          <circle cx="60" cy="69" r="21" fill="#4a5064" />
+          <circle cx="60" cy="69" r="14" fill="#232733" />
+          <circle cx="53" cy="62" r="4" fill="#7d869c" opacity="0.7" />
+          <circle cx="93" cy="53" r="4.5" fill="#fca311" />
+          <rect x="18" y="48" width="14" height="9" rx="2" fill="#c7cbd6" opacity="0.6" />
+          <circle cx="22" cy="34" r="3" fill="#c7cbd6" />
+          <circle cx="80" cy="34" r="3" fill="#c7cbd6" />
+        </svg>
+      </div>
       <div>
         <span class="badge">In stock</span>
         <h1>Sony A7 IV — Full-Frame Mirrorless Body</h1>
-        <!-- DEMO EDIT POINT: change this number for the live field-update shot -->
-        <div class="price" id="price">₪8,200</div>
+        <div class="price-row">
+          <span class="price-label">Price</span>
+          <!-- DEMO EDIT POINT: change this number for the live field-update shot -->
+          <div class="price" id="price">₪8,200</div>
+        </div>
         <ul class="specs">
           <li><b>Sensor:</b> 33MP full-frame Exmor R</li>
           <li><b>Video:</b> 4K 60p</li>
